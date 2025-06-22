@@ -34,10 +34,10 @@ model.fit(X_train_features, y_train)
 # 9. Evaluate
 y_pred = model.predict(X_test_features)
 print("Accuracy:", accuracy_score(y_test, y_pred))
-print("\nClassification Report:\n", classification_report(y_test, y_pred))
+#print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # 10. Test custom message
-test_msg = ["click the link"]
+test_msg = ["click the"]
 test_vec = vectorizer.transform(test_msg)
 pred = model.predict(test_vec)
 print("\nCustom prediction:", "Spam" if pred[0] == 1 else "Ham")
